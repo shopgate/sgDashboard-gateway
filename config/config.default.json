@@ -1,0 +1,9 @@
+{
+  "dashboardServer": "<ip of the dashboard server>",
+  "location": "<location name>",
+  "hue": {
+    "bridgeURL": "<bridge ip>",
+    "bridgeUsername": "<bridge username>"
+  },
+  "timezone": "Europe/Berlin"
+}
