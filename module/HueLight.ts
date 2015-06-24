@@ -158,7 +158,6 @@ class HueLight {
 	turnOnWithColor(rgb:string, brightnessPercent:number) {
 		var xy = colorConverter.hexStringToXyBri(rgb);
 		var brightness = Math.round((brightnessPercent / 100) * 255);
-		winston.debug(brightness +"");
 		this.sendRequest({
 			"on": true,
 			"xy": [xy.x, xy.y],
@@ -197,7 +196,7 @@ class HueLight {
 	private sendRequest(postData:Object) {
 
 		if(!this.bridgeURL && this.bridgeUsername) {
-			winston.debug("No bridge settings found");
+			winston.error("No bridge settings found");
 			return;
 		}
 		var url = "http://" + this.bridgeURL + "/api/" + this.bridgeUsername + "/lights/" + this.lightId + "/state";
