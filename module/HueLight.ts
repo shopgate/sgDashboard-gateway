@@ -190,6 +190,10 @@ class HueLight {
 			this.turnOnToLightColor(lightState.color, lightState.brightness);
 		}
 
+		if (lightState.lightStatus == LightState.LightStatus.OFF) {
+			this.turnOff();
+		}
+
 
 	}
 
