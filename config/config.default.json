@@ -1,9 +1,19 @@
 {
   "dashboardServer": "<ip of the dashboard server>",
   "location": "<location name>",
-  "hue": {
-    "bridgeURL": "<bridge ip>",
-    "bridgeUsername": "<bridge username>"
-  },
+  "hues": [
+    {
+      "bridgeURL": "<bridge ip>",
+      "bridgeUsername": "<bridge username>",
+      "startId": 1,
+      "endId": 100
+    },
+    {
+      "bridgeURL": "<bridge ip>",
+      "bridgeUsername": "<bridge username>",
+      "startId": 101,
+      "endId": 200
+    }
+  ],
   "timezone": "Europe/Berlin"
 }
